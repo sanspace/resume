@@ -18,13 +18,9 @@ function getMarkdownFromElement(element) {
 
 // Collect, parse and render markdown
 function renderMarkdown() {
-  console.log('rendering markdown');
   document.querySelectorAll('.markdown-content').forEach(function(element, i){
-    console.log('rendering element');
     markdown = getMarkdownFromElement(element);
-    console.log('markdown\n' + markdown);
     html = marked(markdown)
-    console.log('html\n' + html);
     element.innerHTML = html;
   });
 }
