@@ -20,7 +20,7 @@ function getMarkdownFromElement(element) {
 function renderMarkdown() {
   document.querySelectorAll('.markdown-content').forEach(function(element, i){
     markdown = getMarkdownFromElement(element);
-    html = marked(markdown)
+    html = marked.parse(markdown)
     element.innerHTML = html;
   });
 }
