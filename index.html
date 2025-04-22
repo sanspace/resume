@@ -171,7 +171,16 @@
 
     <!-- Javscript for marked.js (converting markdown to HTML) https://github.com/markedjs/marked -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/process-md.js"></script>
     <!-- Custom Javascript to fetch markdown content and convert using above marked.js -->
-    <script src="js/markdown.js"></script>
+    <script type="text/javascript">
+      processMarkdownElements({
+        selector: ".markdown-content",
+        markedOptions: {
+          gfm: true,
+          breaks: true,
+        }
+      });
+    </script>
   </body>
 </html>
